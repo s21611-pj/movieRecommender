@@ -9,8 +9,8 @@ Install:
     -> pip install numpy
 After instalation:
     -> in console open folder with main.py and run command:
-        * "main.py --user 'Paweł Czapiewski' --score-type Euclidean"
-        * "main.py --user 'Paweł Czapiewski' --score-type Pearson"
+        * "python main.py --user 'Paweł Czapiewski' --score-type Euclidean"
+        * "python main.py --user 'Paweł Czapiewski' --score-type Pearson"
 """
 
 import argparse
@@ -170,7 +170,7 @@ if __name__ == '__main__':
 
     ratings_file = 'movie_ratings.json'
 
-    with open(ratings_file, 'r') as f:
+    with open(ratings_file, 'r', encoding='utf-8') as f:
         data = json.loads(f.read())
 
     database = prepare_database()
